@@ -2,9 +2,9 @@
 
 Este módulo contiene el backend de la aplicación **Trivia Musical**, desarrollado como parte del Congreso Nacional de Tendencias Computacionales (2025). Expone una API RESTful encargada de gestionar las partidas, almacenar los datos de usuario y consumir la API externa de Deezer para construir preguntas dinámicas.
 
----
-
 ## 🔌 Endpoints Disponibles
+
+A continuación se describen los endpoints que expone la API del backend. Estos permiten iniciar partidas, registrar respuestas de los usuarios, y reanudar sesiones previas.
 
 ### 🎮 Iniciar Partida
 
@@ -14,34 +14,49 @@ Este módulo contiene el backend de la aplicación **Trivia Musical**, desarroll
 
 ```json
 {
-  "playlistId": "ID_PLAYLIST" // Number (ID de la playlist)
+  "playlistId": 123456
 }
 ```
+
+**Tipos de datos:**
+
+| Campo      | Tipo   | Descripción                |
+| ---------- | ------ | -------------------------- |
+| playlistId | Number | ID numérico de la playlist |
 
 **Respuesta:**
 
 ```json
 {
-  "sessionId": "ID_PARTIDA", //String (ID de la sesión)
+  "sessionId": "abc123",
   "questions": [
     {
-      "trackId": "ID_CANCION", //Number (ID de la canción)
-      "previewUrl": "URL_AUDIO", // String (Preview de la canción)
+      "trackId": 456789,
+      "previewUrl": "https://audio.com/preview.mp3",
       "options": [
         {
-        "id": "OPCION1", //Number (ID de la canción)
-        "text": "Canción 1 - Artista 1" // String (Nombre y artista de la canción)
+          "id": 1,
+          "text": "Canción 1 - Artista 1"
         },
         {
-        "id": "OPCION2", //Number (ID de la canción)
-        "text": "Canción 2 - Artista 2" // String (Nombre y artista de la canción)
-        },
-        ...
+          "id": 2,
+          "text": "Canción 2 - Artista 2"
+        }
       ]
     }
   ]
 }
 ```
+
+**Tipos de datos:**
+
+| Campo           | Tipo   | Descripción                               |
+| --------------- | ------ | ----------------------------------------- |
+| sessionId       | String | ID de la sesión generada                  |
+| trackId         | Number | ID de la canción                          |
+| previewUrl      | String | URL del fragmento de audio                |
+| id (en options) | Number | ID numérico de la canción en las opciones |
+| text            | String | Nombre y artista de la canción            |
 
 ### 📩 Enviar Respuestas
 
@@ -51,30 +66,49 @@ Este módulo contiene el backend de la aplicación **Trivia Musical**, desarroll
 
 ```json
 {
-  "sessionId": "ID_PARTIDA", //String (ID de la sesión)
+  "sessionId": "abc123",
   "answers": [
     {
-      "questionId": "ID_PREGUNTA", //Number (ID de la canción correcta)
-      "selectedOptionId": "ID_OPCION" //Number (ID de la canción de la opción seleccionada)
+      "questionId": 456789,
+      "selectedOptionId": 1
     }
   ]
 }
 ```
 
+**Tipos de datos:**
+
+| Campo            | Tipo   | Descripción                          |
+| ---------------- | ------ | ------------------------------------ |
+| sessionId        | String | ID de la sesión                      |
+| questionId       | Number | ID de la pregunta (track) respondida |
+| selectedOptionId | Number | ID de la opción seleccionada         |
+
 **Respuesta:**
 
 ```json
 {
-  "success": true, // Booleano (true o false)
+  "success": true,
   "data": {
-    "isComplete": false, // Booleano (true o false)
-    "currentScore": "CURRENT_SCORE", //Number  (Puntaje actual)
-    "correctAnswers": "CORRECT_ASNWERS", //Number (Preguntas correctas)
-    "answeredQuestions": "ANSWERED_QUESTIONS", //Number (Preguntas respondidas)
-    "totalQuestions": "TOTAL_QUESTIONS" //Number  (Número total de preguntas)
+    "isComplete": false,
+    "currentScore": 600,
+    "correctAnswers": 3,
+    "answeredQuestions": 4,
+    "totalQuestions": 10
   }
 }
 ```
+
+**Tipos de datos:**
+
+| Campo             | Tipo    | Descripción                        |
+| ----------------- | ------- | ---------------------------------- |
+| success           | Boolean | Indica si la operación fue exitosa |
+| isComplete        | Boolean | Indica si la trivia fue completada |
+| currentScore      | Number  | Puntaje actual del usuario         |
+| correctAnswers    | Number  | Número de respuestas correctas     |
+| answeredQuestions | Number  | Total de preguntas respondidas     |
+| totalQuestions    | Number  | Número total de preguntas          |
 
 ### 📩 Enviar Respuestas
 
@@ -84,31 +118,42 @@ Este módulo contiene el backend de la aplicación **Trivia Musical**, desarroll
 
 ```json
 {
-  "success": true, // Booleano (true o false)
+  "success": true,
   "data": {
-    "sessionId": "ID_PARTIDA", //String (ID de la sesión)
-    "playlistId": "ID_PLAYLIST", // Number (ID de la playlist)
-    "totalQuestions": "TOTAL_QUESTIONS", //Number  (Número total de preguntas)
+    "sessionId": "abc123",
+    "playlistId": 123456,
+    "totalQuestions": 10,
     "questions": [
-        {
-        "trackId": "ID_CANCION", //Number (ID de la canción)
-        "previewUrl": "URL_AUDIO", // String (Preview de la canción)
+      {
+        "trackId": 789012,
+        "previewUrl": "https://audio.com/preview2.mp3",
         "options": [
-            {
-            "id": "OPCION1", //Number (ID de la canción)
-            "text": "Canción 1 - Artista 1" // String (Nombre y artista de la canción)
-            },
-            {
-            "id": "OPCION2", //Number (ID de la canción)
-            "text": "Canción 2 - Artista 2" // String (Nombre y artista de la canción)
-            },
-            ...
+          {
+            "id": 3,
+            "text": "Canción 3 - Artista 3"
+          },
+          {
+            "id": 4,
+            "text": "Canción 4 - Artista 4"
+          }
         ]
-        }
-  ]
+      }
+    ]
   }
 }
 ```
+
+**Tipos de datos:**
+
+| Campo           | Tipo   | Descripción                    |
+| --------------- | ------ | ------------------------------ |
+| sessionId       | String | ID de la sesión                |
+| playlistId      | Number | ID numérico de la playlist     |
+| totalQuestions  | Number | Número total de preguntas      |
+| trackId         | Number | ID de la canción               |
+| previewUrl      | String | Enlace de preview del audio    |
+| id (en options) | Number | ID de la canción en la opción  |
+| text            | String | Nombre y artista de la canción |
 
 ## ⚙️ Configuración de Entorno
 
