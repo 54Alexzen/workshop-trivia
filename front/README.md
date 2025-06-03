@@ -23,7 +23,7 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=
 VITE_FIREBASE_APP_ID=
 ```
 
-### 1. Ejecución en Desarrollo
+### ▶️ Ejecución en Desarrollo
 
 ```bash
 npm install
@@ -31,7 +31,7 @@ npm run dev
 
 ```
 
-### 2. Estructura del Proyecto
+### 📁 Estructura del Proyecto
 
 ```text
 /front
@@ -46,7 +46,7 @@ npm run dev
 └── package.json
 ```
 
-### 3. 🧰 Tecnologías y Paquetes
+### 🧰 Tecnologías y Paquetes
 
 - React (con Vite): SPA moderna.
 - Firebase JS SDK: Autenticación.
