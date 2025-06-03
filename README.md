@@ -53,3 +53,6 @@ Este proyecto busca demostrar cómo construir un sistema completo de trivia musi
 git clone https://github.com/54Alexzen/workshop-trivia.git
 cd workshop-trivia
 ```
+
+## 👨🏻‍💻Author
+- [@54Alexzen](https://github.com/54Alexzen)

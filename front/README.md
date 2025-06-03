@@ -49,3 +49,6 @@ npm run dev
 - React (con Vite): SPA moderna.
 - Firebase JS SDK: Autenticación.
 - Tailwind CSS V4
+
+## 👨🏻‍💻Author
+- [@54Alexzen](https://github.com/54Alexzen)

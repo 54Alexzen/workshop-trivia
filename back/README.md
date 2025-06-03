@@ -196,3 +196,6 @@ npm run dev
 - Express: Framework para servidor HTTP.
 - Firebase Admin SDK: Autenticación y persistencia.
 - Zod: Validación de estructuras de datos.
+
+## 👨🏻‍💻Author
+- [@54Alexzen](https://github.com/54Alexzen)
