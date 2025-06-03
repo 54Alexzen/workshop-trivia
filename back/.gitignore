@@ -1,0 +1,17 @@
+# Ignorar directorios generados
+/node_modules
+/dist
+
+# Ignorar archivos de configuración local
+.env
+.idea
+
+# Ignorar archivos de registro y generados automáticamente
+*.txt
+*.xlsx
+*.log
+*.error
+*.debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
