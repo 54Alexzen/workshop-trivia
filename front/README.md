@@ -2,15 +2,13 @@
 
 Este módulo representa la interfaz de usuario del sistema **Trivia Musical**, diseñada para interactuar con Firebase Authentication y permitir el inicio de sesión del usuario. Una vez autenticado, el frontend obtiene el token de acceso que puede ser usado para autenticar peticiones al backend.
 
----
-
 ## 👨‍💻 Funcionalidad Actual
 
 - Botón de login/logout conectado con Firebase Auth.
 - Visualización de datos del usuario autenticado.
 - Preparado para extender con lógica de juego y consumo de la API backend.
 
-## ⚙️ Configuración de Entorno
+### ⚙️ Configuración de Entorno
 
 Crear un archivo `.env` en la raíz de `/front` con el siguiente contenido:
 

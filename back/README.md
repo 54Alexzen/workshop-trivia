@@ -155,9 +155,9 @@ A continuación se describen los endpoints que expone la API del backend. Estos 
 | id (en options) | Number | ID de la canción en la opción  |
 | text            | String | Nombre y artista de la canción |
 
-## ⚙️ Configuración de Entorno
+### ⚙️ Configuración de Entorno
 
-Crear un archivo `.env` en la raíz de `/front` con el siguiente contenido:
+Crear un archivo `.env` en la raíz de `/back` con el siguiente contenido:
 
 ```env
 FIREBASE_ADMIN_PRIVATE_KEY=
