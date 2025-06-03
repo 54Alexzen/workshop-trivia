@@ -33,11 +33,18 @@ npm run dev
 
 ### 2. Estructura del Proyecto
 
+```text
 /front
-├── App.j        # Componente principal
-├── firebase.js    # Configuración del cliente Firebase
-├── main.jsx       # Entrypoint
-└── assets/
+├── src/
+│   ├── config/
+│   │   ├── environments.ts
+│   │   └── firebase.ts
+│   └── App.tsx
+│   └── index.css
+│   └── main.tsx
+├── public/
+└── package.json
+```
 
 ### 3. 🧰 Tecnologías y Paquetes
 
