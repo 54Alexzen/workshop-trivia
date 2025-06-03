@@ -18,9 +18,11 @@ Este proyecto busca demostrar cómo construir un sistema completo de trivia musi
 
 ## 🧩 Estructura del Proyecto
 
+```text
 /workshop-trivia
 ├── /front    # Interfaz de usuario (cliente web)
 └── /back     # API RESTful y servicios backend
+```
 
 ## 🚀 Características Técnicas
 
